@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Blocks from "./components/Blocks";
-import Player from "./components/player";
+import Player from "./components/Player";
 import { useData } from "./context/DataProvider";
 
 function App() {
