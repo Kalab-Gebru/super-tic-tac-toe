@@ -32,8 +32,8 @@ export function DataProvider({ children }) {
   const [boardData, setBoardData] = useState(empityboards);
   const [wins, setWins] = useState(empityWin);
   const [gameStatus, setGameStatus] = useState({
-    GameOver: true,
-    Winner: 1,
+    GameOver: false,
+    Winner: undefined,
   });
   const [currentPlayer, setCurrentPlayer] = useState(0);
   const [currentBlock, setCurrentBlock] = useState("any");
