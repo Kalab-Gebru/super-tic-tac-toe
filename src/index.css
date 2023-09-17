@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "CaveatBrush-Regular";
+  src: local("CaveatBrush-Regular"),
+    url("./public/font/CaveatBrush-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
