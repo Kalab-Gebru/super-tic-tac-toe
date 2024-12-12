@@ -77,7 +77,7 @@ export default function Blocks() {
                 >
                   <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
                     <div
-                      className={`text-black-100 text-[170px] font-mark ${
+                      className={`text-black-100 text-[100px] font-mark ${
                         wins[i].value == "X" ? "text-blue-700" : "text-red-700"
                       }`}
                     >
@@ -103,7 +103,7 @@ export default function Blocks() {
                       onClick={() => setCurrentBlock(i)}
                       className="absolute top-0 left-0 z-20 flex items-center justify-center w-full h-full bg-gray-200 cursor-pointer opacity-60"
                     >
-                      <div className="font-mark text-[170px] text-black ">
+                      <div className="font-mark text-[100px] text-black ">
                         {bl.no}
                       </div>
                     </div>

@@ -15,7 +15,7 @@ export default function Cell({ data, blno, func, currentBlock }) {
     >
       {data.value ? (
         <div
-          className={`text-7xl ${
+          className={`text-5xl ${
             currentBlock != "any" && currentBlock != blno && "opacity-30"
           } font-mark ${data.value == "X" ? "text-blue-700" : "text-red-700"} `}
         >
