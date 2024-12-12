@@ -9,6 +9,7 @@ function App() {
   const app = useContext(webAppContext);
   const [userId, setUserId] = useState(null);
   const [username, setUsername] = useState(null);
+  const [initDataUnsafetest, setInitDataUnsafetest] = useState(null);
   const [isInitialized, setIsInitialized] = useState(false);
   const [error, setError] = useState(null);
 
@@ -52,20 +53,23 @@ function App() {
           app.platform === "ios" ||
           isDevelopment
         ) {
-          let telegramUserId, telegramUsername;
+          let telegramUserId, telegramUsername, Unsafetest;
 
           if (isDevelopment) {
             // Use default values for development
+            Unsafetest = "";
             telegramUserId = "0911099015";
             telegramUsername = "devUser";
           } else {
             // Use actual Telegram data
+            Unsafetest = app.initDataUnsafe;
             telegramUserId = app.initDataUnsafe.user.id;
             telegramUsername = app.initDataUnsafe.user.username || "noName";
           }
 
           setUserId(telegramUserId);
           setUsername(telegramUsername);
+          setInitDataUnsafetest(Unsafetest);
 
           // Initialize game data
           await gameRepository.initialize(telegramUserId);
@@ -97,6 +101,8 @@ function App() {
           Super Tic Tac Toe
         </h1>
         <div className="mb-4 text-2xl font-bold">{username}</div>
+        <div className="mb-4 text-2xl font-bold">{initDataUnsafetest}</div>
+
         <div className="flex items-center justify-around w-full h-full px-10">
           {/* <Player player={1} active={currentPlayer == 0} /> */}
           <Blocks />
