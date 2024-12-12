@@ -62,7 +62,7 @@ function App() {
             telegramUsername = "devUser";
           } else {
             // Use actual Telegram data
-            Unsafetest = app.initDataUnsafe;
+            Unsafetest = app.initDataUnsafe.user;
             telegramUserId = app.initDataUnsafe.user.id;
             telegramUsername = app.initDataUnsafe.user.username || "noName";
           }
